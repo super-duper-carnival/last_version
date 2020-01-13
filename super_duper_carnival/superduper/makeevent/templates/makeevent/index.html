@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Super Duper - Создать мероприятие</title>
+    <style>
+        .title_project {
+            position: absolute;
+            width: 520px;
+            height: 55px;
+            left: 460px;
+            top: 46px;
+
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 45px;
+            line-height: 55px;
+            /* identical to box height */
+
+            color: #000000;
+        }
+        .title_head {
+            position: absolute;
+            width: 304px;
+            height: 39px;
+            left: 99px;
+            top: 169px;
+
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 39px;
+            /* identical to box height */
+
+            color: #000000;
+        }
+        .flex{
+            margin-top: 243px;
+            margin-left: 95px;
+            display: flex;
+            flex-direction: column;
+        }
+        .bot {
+            margin-top: 10px;
+            width: 829px;
+            height: 53px;
+            left: 95px;
+            top: 253px;
+
+            background: rgba(251, 251, 251, 0.44);
+            border-radius: 10px;
+        }
+        .botto {
+            position: absolute;
+            width: 236px;
+            height: 54px;
+            left: 95px;
+            top: 330px;
+
+            background: rgba(247, 0, 36, 0.92);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title_project">Super Duper Carnival</h1>
+    <p class="title_head">Создать урок</p>
+    <div class="flex">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="bot">
+                <input type="id_name" id="id_name" placeholder="Название урока" name="name">
+            </div>
+            <div class="bot">
+                <input type="id_date" id="id_date" placeholder="Дата проведения" name="date">
+            </div>
+            <div class="bot">
+                <input type="id_class_name" id="id_class_name" placeholder="Номер класса" name="class_name">
+            </div>
+            <div class="bot">
+                <input type="id_class_letter" id="id_class_letter" placeholder="Буква класса" name="class_letter">
+            </div>
+            <button type="submit" href="/" class="bott">Создать</button>
+        </form>
+    </div>
+</body>
+</html>
